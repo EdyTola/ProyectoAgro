@@ -46,22 +46,22 @@
             <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-8 text-center">Nuestro Equipo</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                    <img src="{{ asset('images/equipo-ricardo.jpg') }}" alt="Ricardo Huami" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <img src="{{ asset('images/ricardo.jpg') }}" alt="Ricardo Huami" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Ricardo Huami</h3>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">Fundador y Director General</p>
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                    <img src="{{ asset('images/equipo-maria.jpg') }}" alt="María Quispe" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <img src="{{ asset('images/maria.jpg') }}" alt="María Quispe" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">María Quispe</h3>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">Directora de Producción Agrícola</p>
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                    <img src="{{ asset('images/equipo-carlos.jpg') }}" alt="Carlos Huami" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <img src="{{ asset('images/carlos.jpg') }}" alt="Carlos Huami" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Carlos Huami</h3>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">Director de Ganadería</p>
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                    <img src="{{ asset('images/equipo-laura.jpg') }}" alt="Laura Mamani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <img src="{{ asset('images/laura.jpg') }}" alt="Laura Mamani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Laura Mamani</h3>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">Directora de Sostenibilidad</p>
                 </div>

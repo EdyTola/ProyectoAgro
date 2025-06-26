@@ -22,7 +22,7 @@
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] antialiased">
 
         {{-- Barra de Navegación Superior (Navbar) --}}
-        <nav class="w-full bg-[#8B805C] dark:bg-[#7a704e] p-4 flex justify-between items-center shadow-md fixed top-0 left-0 z-50">
+        <nav class="w-full bg-[#837227] dark:bg-[#7a704e] p-4 flex justify-between items-center shadow-md fixed top-0 left-0 z-50">
             <div class="flex items-center gap-4">
                 {{-- Logo Riccharly Huami --}}
                 <img src="{{ asset('images/logo-riccharly.png') }}" alt="Riccharly Huami Logo" class="h-8 w-auto">
