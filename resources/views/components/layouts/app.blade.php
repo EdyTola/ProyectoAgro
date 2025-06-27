@@ -15,16 +15,22 @@
 </head>
 <body class="font-sans antialiased bg-[#FDFDFC] dark:bg-[#0a0a0a]">
     {{-- La barra de navegación superior (Navbar) --}}
-    <nav class="w-full bg-[#8B805C] dark:bg-[#7a704e] p-4 flex justify-between items-center shadow-md fixed top-0 left-0 z-50">
+    <nav class="w-full bg-[#837227] dark:bg-[#7a704e] p-4 flex justify-between items-center shadow-md fixed top-0 left-0 z-50">
         <div class="flex items-center gap-4">
             {{-- Logo Riccharly Huami --}}
             <img src="{{ asset('images/logo-riccharly.png') }}" alt="Riccharly Huami Logo" class="h-8 w-auto">
             <span class="text-white text-lg font-semibold">Riccharly Huami</span>
         </div>
 
-        {{-- Barra de búsqueda (opcional, si no la usas puedes quitarla) --}}
-        <div class="flex-grow mx-4 max-w-sm">
-            <input type="text" placeholder="Buscar..." class="w-full p-2 rounded-md bg-white/20 text-white placeholder-white/70 border border-transparent focus:outline-none focus:ring-1 focus:ring-white">
+        {{-- Enlaces de navegación condicionales por rol --}}
+        <div class="flex items-center gap-4"> {{-- Este div agrupa los enlaces condicionales --}}
+            @auth {{-- Solo muestra si hay usuario autenticado --}}
+                @if(Auth::user()->role == 'administrador')
+                    <a href="{{ route('admin.dashboard') }}" class="inline-block px-3 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">Panel de Administración</a>
+                @endif
+                {{-- La línea del carrito COMENTADA como pediste --}}
+                {{-- <a href="{{ route('cart.index') }}" class="inline-block px-3 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">Mi Carrito</a> --}}
+            @endauth
         </div>
 
         {{-- Autenticación y Registro --}}
@@ -34,7 +40,8 @@
                     <div class="flex items-center text-white no-underline cursor-default">
                         {{-- Avatar/Inicial del usuario --}}
                         <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#8B805C] text-base font-bold uppercase mr-2 shadow-sm">
-                            {{ substr(Auth::user()->name, 0, 1) }}
+                            {{-- Usa initials() si lo definiste en User.php, de lo contrario, substr --}}
+                            {{ Auth::user()->initials() ?? substr(Auth::user()->name, 0, 1) }}
                         </div>
                         {{-- Nombre completo del usuario --}}
                         <span class="text-base font-medium">
@@ -45,12 +52,16 @@
                     {{-- Formulario para Cerrar Sesión --}}
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="inline-block px-5 py-1.5 text-white border border-white hover:border-gray-200 rounded-sm text-sm leading-normal ml-4">
+                        <button type="submit" class="inline-block px-5 py-1.5 text-white border border-white rounded-sm bg-[#8B805C] hover:bg-[#7a704e] cursor-pointer text-sm leading-normal ml-4">
                             Cerrar Sesión
                         </button>
                     </form>
 
                 @else
+                    <a href="{{ route('login') }}" class="inline-block px-5 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">
+                        Log in
+                    </a>
+                    
                     <a href="{{ route('login') }}" class="inline-block px-5 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">
                         Log in
                     </a>
@@ -62,7 +73,8 @@
                 @endauth
             </div>
         @endif
-    </nav>
+    </nav> {{-- Cierre de la barra de navegación --}}
+
 
     {{-- Contenedor principal para Sidebar y Contenido --}}
     <div class="flex flex-1 min-h-screen pt-16 overflow-hidden">

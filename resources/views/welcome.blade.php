@@ -42,21 +42,21 @@
                             href="{{ url('/dashboard') }}"
                             class="inline-block px-5 py-1.5 text-white border border-white hover:border-gray-200 rounded-sm text-sm leading-normal"
                         >
-                            Dashboard
+                            Inicio
                         </a>
                     @else
                         <a
                             href="{{ route('login') }}"
                             class="inline-block px-5 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal"
                         >
-                            Log in
+                            Iniciar Sesión
                         </a>
 
                         @if (Route::has('register'))
                             <a
                                 href="{{ route('register') }}"
                                 class="inline-block px-5 py-1.5 text-white border border-white hover:border-gray-200 rounded-sm text-sm leading-normal">
-                                Register
+                                Registrarse
                             </a>
                         @endif
                     @endauth

@@ -7,10 +7,10 @@
                 Productos agrícolas y ganaderos de la más alta calidad en Puno, Perú. Tradición y excelencia desde 1945.
             </p>
             <div class="flex justify-center gap-4">
-                <a href="/catalogo" class="px-6 py-3 bg-[#8B805C] hover:bg-[#7a704e] text-white font-semibold rounded-md shadow-md transition duration-300">
+                <a href="/catalogo" class="px-6 py-3 bg-[#837227] hover:bg-[#7a704e] text-white font-semibold rounded-md shadow-md transition duration-300">
                     Ver catálogo
                 </a>
-                <a href="{{ route('contactos') }}" class="px-6 py-3 border border-[#8B805C] text-[#8B805C] hover:bg-[#8B805C] hover:text-white font-semibold rounded-md shadow-md transition duration-300">
+                <a href="{{ route('contactos') }}" class="px-6 py-3 border border-[#837227] text-[#837227] hover:bg-[#8B805C] hover:text-white font-semibold rounded-md shadow-md transition duration-300">
                     Contacto
                 </a>
             </div>
