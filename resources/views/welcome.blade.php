@@ -30,9 +30,6 @@
             </div>
 
             {{-- Barra de búsqueda (puedes personalizarla más) --}}
-            <div class="flex-grow mx-4 max-w-sm">
-                <input type="text" placeholder="Buscar..." class="w-full p-2 rounded-md bg-white/20 text-white placeholder-white/70 border border-transparent focus:outline-none focus:ring-1 focus:ring-white">
-            </div>
 
             {{-- Autenticación y Registro (revertido a la versión original) --}}
             @if (Route::has('login'))

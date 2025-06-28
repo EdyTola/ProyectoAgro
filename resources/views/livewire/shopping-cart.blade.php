@@ -15,12 +15,12 @@
 
                 {{-- Encabezados de la tabla del carrito --}}
                 <div class="hidden md:flex justify-between items-center text-gray-600 dark:text-gray-400 font-semibold mb-4 px-4">
-                    <div class="w-24"></div> {{-- Espacio para la imagen --}}
+                    <div class="w-24"></div> 
                     <div class="flex-grow ml-4">Producto</div>
                     <div class="w-24 text-right">Precio</div>
                     <div class="w-24 text-center">Cantidad</div>
                     <div class="w-24 text-right">Total</div>
-                    <div class="w-16"></div> {{-- Espacio para el botón de eliminar --}}
+                    <div class="w-16"></div> 
                 </div>
 
                 @foreach ($cartItems as $item)
@@ -34,7 +34,7 @@
                         </div>
                         <div class="w-full md:w-auto flex justify-between items-center md:space-x-4">
                             <p class="text-lg font-bold text-[#8B805C] dark:text-[#a59a7c] mt-1 md:w-24 text-right">S/ {{ number_format($item->price_at_purchase, 2) }}</p>
-                            
+
                             {{-- Controles de Cantidad --}}
                             <div class="flex items-center space-x-2 md:w-24 justify-center">
                                 {{-- Estos botones requerirán Livewire o un formulario JS para funcionar --}}
@@ -42,9 +42,9 @@
                                 <span class="text-gray-700 dark:text-gray-300 font-semibold">{{ $item->quantity }}</span>
                                 <button wire:click="incrementQuantity({{ $item->id }})" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold hover:bg-gray-300 dark:hover:bg-gray-600">+</button>
                             </div>
-                            
+
                             <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 md:w-24 text-right">S/ {{ number_format($item->quantity * $item->price_at_purchase, 2) }}</span>
-                            
+
                             {{-- Botón de Eliminar --}}
                             <button wire:click="removeItem({{ $item->id }})" class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-500 transition duration-300 text-sm md:w-16 text-center">
                                 Eliminar
@@ -75,10 +75,10 @@
                         <span>S/ {{ number_format($total, 2) }}</span>
                     </div>
                 </div>
-                <button class="mt-8 w-full bg-[#8B805C] hover:bg-[#7a704e] text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                <a href="{{ route('boleta') }}" class="mt-8 w-full inline-block bg-[#8B805C] hover:bg-[#7a704e] text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">
                     Proceder al Pago
-                </button>
-                
+                </a>
+
                 {{-- Iconos de Métodos de Pago --}}
                 <div class="mt-4 text-center">
                     <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Métodos de pago aceptados:</p>

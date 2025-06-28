@@ -6,9 +6,9 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
-use App\Models\Product; 
-use App\Models\Cart; 
-use App\Models\CartItem; 
+use App\Models\Product;
+use App\Models\Cart;
+use App\Models\CartItem;
 
 class DatabaseSeeder extends Seeder
 {
@@ -35,15 +35,16 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'Cliente',
-            'email' => 'cliente@gmail.com.com',
+            'email' => 'cliente@gmail.com',
             'password' => bcrypt('1234567890'),
             'role' => 'cliente',
         ]);
 
-        
+
         $this->call([
-            ProductSeeder::class, // Este seeder ya contiene su propio truncate de Product, pero tenerlo al inicio es más seguro
-            // Si tienes un CategorySeeder, también deberías llamarlo aquí
+            ProductSeeder::class, 
+            // Este seeder ya contiene su propio truncate de Product, pero tenerlo al inicio es más seguro
+            
             // CategorySeeder::class,
         ]);
 
