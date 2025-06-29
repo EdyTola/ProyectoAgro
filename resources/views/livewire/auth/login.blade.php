@@ -34,7 +34,19 @@ new #[Layout('components.layouts.auth')] class extends Component {
 
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+
+        // --- LÓGICA DE REDIRECCIÓN POR ROL ---
+        $user = Auth::user(); // Obtener el usuario autenticado
+
+        if ($user && $user->role === 'administrador') {
+            // Redirigir a los administradores a su página vacía
+            // ¡ATENCIÓN: Cambiado a 'admin.blank_page' porque es el nombre de la ruta definida en web.php!
+            $this->redirect(route('admin.blank_page'), navigate: true);
+        } else {
+            // Redirigir a otros roles (ej. 'cliente') al dashboard normal
+            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        }
+        // --- FIN DE LA LÓGICA DE REDIRECCIÓN POR ROL ---
     }
 
     protected function ensureIsNotRateLimited(): void
