@@ -29,11 +29,11 @@
                 <span class="text-white text-lg font-semibold">Riccharly Huami</span>
             </div>
 
+<<<<<<< HEAD
+=======
             {{-- Barra de búsqueda (puedes personalizarla más) --}}
-            <div class="flex-grow mx-4 max-w-sm">
-                <input type="text" placeholder="Buscar..." class="w-full p-2 rounded-md bg-white/20 text-white placeholder-white/70 border border-transparent focus:outline-none focus:ring-1 focus:ring-white">
-            </div>
 
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
             {{-- Autenticación y Registro (revertido a la versión original) --}}
             @if (Route::has('login'))
                 <div class="flex items-center gap-4">

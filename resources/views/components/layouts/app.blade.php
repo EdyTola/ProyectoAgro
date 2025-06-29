@@ -22,6 +22,25 @@
             <span class="text-white text-lg font-semibold">Riccharly Huami</span>
         </div>
 
+<<<<<<< HEAD
+=======
+        {{-- Enlaces de navegación condicionales por rol --}}
+        <div class="flex items-center gap-4"> {{-- Este div agrupa los enlaces condicionales --}}
+            @auth {{-- Solo muestra si hay usuario autenticado --}}
+<<<<<<< HEAD
+                {{-- La línea del carrito COMENTADA como pediste --}}
+=======
+                {{-- Se borra (comenta) el enlace al Panel de Administración --}}
+                {{-- @if(Auth::user()->role == 'administrador')
+                    <a href="{{ route('admin.dashboard') }}" class="inline-block px-3 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">Panel de Administración</a>
+                @endif --}}
+                {{-- La línea del carrito COMENTADA como pediste anteriormente --}}
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
+                {{-- <a href="{{ route('cart.index') }}" class="inline-block px-3 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">Mi Carrito</a> --}}
+            @endauth
+        </div>
+
+>>>>>>> 86a17ae0358a35db8b35923fc16fb784ba8f0c55
         {{-- Autenticación y Registro --}}
         @if (Route::has('login'))
             <div class="flex items-center gap-4">
@@ -44,6 +63,10 @@
                         </button>
                     </form>
                 @else
+<<<<<<< HEAD
+=======
+                    {{-- Eliminada la línea de "Log in" duplicada --}}
+>>>>>>> 86a17ae0358a35db8b35923fc16fb784ba8f0c55
                     <a href="{{ route('login') }}" class="inline-block px-5 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">
                         Log in
                     </a>

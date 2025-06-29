@@ -15,12 +15,12 @@
 
                 {{-- Encabezados de la tabla del carrito --}}
                 <div class="hidden md:flex justify-between items-center text-gray-600 dark:text-gray-400 font-semibold mb-4 px-4">
-                    <div class="w-24"></div> {{-- Espacio para la imagen --}}
+                    <div class="w-24"></div> 
                     <div class="flex-grow ml-4">Producto</div>
                     <div class="w-24 text-right">Precio</div>
                     <div class="w-24 text-center">Cantidad</div>
                     <div class="w-24 text-right">Total</div>
-                    <div class="w-16"></div> {{-- Espacio para el botón de eliminar --}}
+                    <div class="w-16"></div> 
                 </div>
 
                 @foreach ($cartItems as $item)
