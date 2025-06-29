@@ -25,9 +25,6 @@
         {{-- Enlaces de navegación condicionales por rol --}}
         <div class="flex items-center gap-4"> {{-- Este div agrupa los enlaces condicionales --}}
             @auth {{-- Solo muestra si hay usuario autenticado --}}
-                @if(Auth::user()->role == 'administrador')
-                    <a href="{{ route('admin.dashboard') }}" class="inline-block px-3 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">Panel de Administración</a>
-                @endif
                 {{-- La línea del carrito COMENTADA como pediste --}}
                 {{-- <a href="{{ route('cart.index') }}" class="inline-block px-3 py-1.5 text-white border border-transparent hover:border-gray-200 rounded-sm text-sm leading-normal">Mi Carrito</a> --}}
             @endauth

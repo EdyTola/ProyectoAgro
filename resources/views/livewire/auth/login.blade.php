@@ -34,9 +34,21 @@ new #[Layout('components.layouts.auth')] class extends Component {
 
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+
+        // --- INICIO DE LA NUEVA LÓGICA DE REDIRECCIÓN POR ROL ---
+        $user = Auth::user(); // Obtener el usuario autenticado
+
+        if ($user && $user->role === 'administrador') {
+            // Redirigir a los administradores a su propio panel
+            $this->redirect(route('admin.panel'), navigate: true);
+        } else {
+            // Redirigir a otros roles (ej. 'cliente') al dashboard normal o a su página de inicio
+            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        }
+        // --- FIN DE LA NUEVA LÓGICA DE REDIRECCIÓN POR ROL ---
     }
 
+    // Estas funciones deben estar DENTRO de la clase, no después de su cierre.
     protected function ensureIsNotRateLimited(): void
     {
         if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {

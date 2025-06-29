@@ -1,7 +1,7 @@
 {{-- resources/views/components/layouts/app/sidebar.blade.php --}}
 <div class="h-full py-4 px-3">
     {{-- LOGO del sidebar ELIMINADO para evitar duplicidad con la Navbar --}}
-    
+
     <ul class="space-y-2 font-medium">
         <li>
             <a href="{{ route('home') }}" class="flex items-center p-2 text-base font-normal rounded-lg text-[#1b1b18] dark:text-white hover:bg-[#F7F6F3] dark:hover:bg-gray-700">
@@ -37,6 +37,15 @@
                 {{-- Icono de Contactos (correo) --}}
                 <svg class="flex-shrink-0 w-6 h-6 text-[#837227] dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                 <span class="ml-3">Contactos</span>
+            </a>
+        </li>
+        <li>
+            <a href="/boleta" class="flex items-center p-2 text-base font-normal rounded-lg text-[#1b1b18] dark:text-white hover:bg-[#F7F6F3] dark:hover:bg-gray-700">
+                {{-- Icono de Boleta --}}
+                <svg class="flex-shrink-0 w-6 h-6 text-[#837227] dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm0 2h8v12H6V4zm2 2v2h4V6H8zm0 4v2h4v-2H8z"/>
+                </svg>
+                <span class="ml-3">Boleta</span>
             </a>
         </li>
         @guest
