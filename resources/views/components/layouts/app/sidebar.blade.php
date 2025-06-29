@@ -1,6 +1,10 @@
 {{-- resources/views/components/layouts/app/sidebar.blade.php --}}
 <div class="h-full py-4 px-3">
+<<<<<<< HEAD
     {{-- LOGO del sidebar ELIMINADO para evitar duplicidad con la Navbar --}}
+=======
+    
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
 
     <ul class="space-y-2 font-medium">
         <li>

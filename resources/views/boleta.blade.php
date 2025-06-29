@@ -160,7 +160,11 @@
             justify-content: center;
             gap: 16px;
         }
+<<<<<<< HEAD
         .boleta-actions button {
+=======
+        .boleta-actions button,.boleta-actions .pdf {
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
             padding: 10px 24px;
             border: none;
             border-radius: 6px;
@@ -168,6 +172,12 @@
             font-weight: bold;
             cursor: pointer;
             transition: background 0.2s;
+<<<<<<< HEAD
+=======
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
         }
         .boleta-actions .guardar {
             background: #bdb76b;
@@ -188,6 +198,10 @@
             color: #fff;
             text-decoration: none;
             display: inline-block;
+<<<<<<< HEAD
+=======
+            border
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
         }
         .boleta-actions .pdf:hover {
             background: #6b5a1a;

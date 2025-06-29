@@ -4,9 +4,14 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\BoletaController;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 // No es necesario importar DashboardController aquí si lo usas en la función anónima.
 // Si en el futuro creas un DashboardController para el admin, lo importarías aquí.
+=======
+// Asegúrate de que todas las clases usadas estén importadas aquí
+// Por ejemplo, si usas UserProfile en alguna ruta comentada, deberías tener su 'use'
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
 
 // Ruta para la página de Inicio (tu página principal)
 Route::get('/', function () {
@@ -85,8 +90,15 @@ require __DIR__.'/auth.php';// <-- ¡IMPORTANTE: este es el nombre de la ruta!
 // Incluye las rutas de autenticación de Laravel Breeze/Jetstream
 require __DIR__.'/auth.php';
 
+<<<<<<< HEAD
 // Rutas de Boleta
 Route::get('/boleta', [BoletaController::class, 'show'])->name('boleta');
 Route::post('/boleta', [BoletaController::class, 'store'])->name('boleta.store');
 Route::post('/boleta/imprimir', [BoletaController::class, 'imprimirVoucher'])->name('boleta.imprimir');
 Route::get('/boleta/pdf', [BoletaController::class, 'downloadPDF'])->name('boleta.pdf');
+=======
+Route::get('/boleta', [BoletaController::class, 'show'])->name('boleta');
+Route::post('/boleta', [BoletaController::class, 'store'])->name('boleta.store');
+Route::post('/boleta/imprimir', [BoletaController::class, 'imprimirVoucher'])->name('boleta.imprimir');
+Route::get('/boleta/pdf', [BoletaController::class, 'downloadPDF'])->name('boleta.pdf');
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f

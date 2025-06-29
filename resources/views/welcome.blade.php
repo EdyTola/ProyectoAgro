@@ -29,6 +29,11 @@
                 <span class="text-white text-lg font-semibold">Riccharly Huami</span>
             </div>
 
+<<<<<<< HEAD
+=======
+            {{-- Barra de búsqueda (puedes personalizarla más) --}}
+
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
             {{-- Autenticación y Registro (revertido a la versión original) --}}
             @if (Route::has('login'))
                 <div class="flex items-center gap-4">

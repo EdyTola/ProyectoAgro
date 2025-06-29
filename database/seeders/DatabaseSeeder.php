@@ -42,8 +42,9 @@ class DatabaseSeeder extends Seeder
 
 
         $this->call([
-            ProductSeeder::class, // Este seeder ya contiene su propio truncate de Product, pero tenerlo al inicio es más seguro
-            // Si tienes un CategorySeeder, también deberías llamarlo aquí
+            ProductSeeder::class, 
+            // Este seeder ya contiene su propio truncate de Product, pero tenerlo al inicio es más seguro
+            
             // CategorySeeder::class,
         ]);
 

@@ -112,7 +112,11 @@
             <div class="info-left">
                 <div>RUT: 76.543.210-8</div>
                 <div>Av. Providencia 1234, Santiago</div>
+<<<<<<< HEAD
                 <div>contacto@comercialSantiago.cl</div>
+=======
+                <div>contacto@riccharlyhuami.cl</div>
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
             </div>
             <div class="info-right">
                 BOLETA ELECTRÓNICA<br>
@@ -161,8 +165,12 @@
 
     <div class="footer">
         <p>¡Gracias por su compra!</p>
+<<<<<<< HEAD
         <p>Este documento es una representación impresa de una boleta electrónica</p>
         <p>Riccharly Huami - Todos los derechos reservados</p>
+=======
+        <p>Riccharly Huami - @Todos los derechos reservados</p>
+>>>>>>> 85c14eef84e259704571025b118ad81ff111bb3f
     </div>
 </body>
 </html>
