@@ -35,35 +35,12 @@ new #[Layout('components.layouts.auth')] class extends Component {
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
 
-<<<<<<< HEAD
-        // --- LÓGICA DE REDIRECCIÓN POR ROL ---
-        $user = Auth::user(); // Obtener el usuario autenticado
-
-        if ($user && $user->role === 'administrador') {
-            // Redirigir a los administradores a su página vacía
-            // ¡ATENCIÓN: Cambiado a 'admin.blank_page' porque es el nombre de la ruta definida en web.php!
-            $this->redirect(route('admin.blank_page'), navigate: true);
-        } else {
-            // Redirigir a otros roles (ej. 'cliente') al dashboard normal
-            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
-        }
-        // --- FIN DE LA LÓGICA DE REDIRECCIÓN POR ROL ---
-=======
-        // --- INICIO DE LA NUEVA LÓGICA DE REDIRECCIÓN POR ROL ---
-        $user = Auth::user(); // Obtener el usuario autenticado
-
-        if ($user && $user->role === 'administrador') {
-            // Redirigir a los administradores a su propio panel
-            $this->redirect(route('admin.panel'), navigate: true);
-        } else {
-            // Redirigir a otros roles (ej. 'cliente') al dashboard normal o a su página de inicio
-            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
-        }
-        // --- FIN DE LA NUEVA LÓGICA DE REDIRECCIÓN POR ROL ---
->>>>>>> 86a17ae0358a35db8b35923fc16fb784ba8f0c55
+        // --- LÓGICA DE REDIRECCIÓN SIMPLIFICADA ---
+        // Ahora, todos los usuarios autenticados (admin o cliente) irán al dashboard.
+        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        // --- FIN DE LA LÓGICA DE REDIRECCIÓN ---
     }
 
-    // Estas funciones deben estar DENTRO de la clase, no después de su cierre.
     protected function ensureIsNotRateLimited(): void
     {
         if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {
