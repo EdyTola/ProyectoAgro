@@ -25,7 +25,7 @@ class CatalogController extends Controller
         if ($searchTerm) {
             $productsQuery->where(function ($query) use ($searchTerm) {
                 $query->where('name', 'like', '%' . $searchTerm . '%')
-                      ->orWhere('description', 'like', '%' . $searchTerm . '%');
+                    ->orWhere('description', 'like', '%' . $searchTerm . '%');
             });
         }
 
@@ -72,7 +72,7 @@ class CatalogController extends Controller
             'filterCategory' => $filterCategory,
             'orderBy' => $orderBy,
             'orderDirection' => $orderDirection,
-            'availableCategories' => array_keys($groupedProducts), // O un array fijo si prefieres
+            'availableCategories' => array_keys($groupedProducts), // O un array fijo 
             'orderedCategories' => $orderedCategories, // Las categorías en el orden deseado
         ]);
     }
