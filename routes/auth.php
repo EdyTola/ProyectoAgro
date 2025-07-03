@@ -29,9 +29,6 @@ Route::middleware('auth')->group(function () {
 
     Volt::route('confirm-password', 'auth.confirm-password')
         ->name('password.confirm');
-
-    // Las rutas de 'profile.edit', 'profile.update', 'profile.destroy' han sido ELIMINADAS de aquí.
-    // No son necesarias si no tienes una página de perfil dedicada.
 });
 
 Route::post('logout', App\Livewire\Actions\Logout::class)

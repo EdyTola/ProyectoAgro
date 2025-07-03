@@ -83,10 +83,10 @@
                 <div class="mt-4 text-center">
                     <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Métodos de pago aceptados:</p>
                     <div class="flex justify-center space-x-3">
-                        <img src="{{ asset('images/icons/visa.svg') }}" alt="Visa" class="h-8"> {{-- Reemplaza con tus propias rutas de iconos --}}
-                        <img src="{{ asset('images/icons/mastercard.svg') }}" alt="Mastercard" class="h-8">
-                        <img src="{{ asset('images/icons/amex.svg') }}" alt="American Express" class="h-8">
-                        <img src="{{ asset('images/icons/cash.svg') }}" alt="Efectivo" class="h-8">
+                        <img src="{{ asset('images/visa.png') }}" alt="Visa" class="h-8"> {{-- Reemplaza con tus propias rutas de iconos --}}
+                        <img src="{{ asset('images/mastercard.png') }}" alt="Mastercard" class="h-8">
+                        <img src="{{ asset('images/amex.png') }}" alt="American Express" class="h-8">
+                        <img src="{{ asset('images/cash.png') }}" alt="Efectivo" class="h-8">
                         {{-- Puedes añadir más iconos si tienes otros métodos de pago --}}
                     </div>
                 </div>

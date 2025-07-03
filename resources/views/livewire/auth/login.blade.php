@@ -34,11 +34,9 @@ new #[Layout('components.layouts.auth')] class extends Component {
 
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
-
-        // --- LÓGICA DE REDIRECCIÓN SIMPLIFICADA ---
+        -
         // Ahora, todos los usuarios autenticados (admin o cliente) irán al dashboard.
         $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
-        // --- FIN DE LA LÓGICA DE REDIRECCIÓN ---
     }
 
     protected function ensureIsNotRateLimited(): void
@@ -63,7 +61,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
     }
 }; ?>
 
-{{-- Contenedor principal para centrar y aplicar fondo general --}}
+{{-- Contenedor principal--}}
 <div class="flex items-center justify-center min-h-screen bg-[#FDFDFC] dark:bg-[#0a0a0a] p-4 sm:p-6">
     {{-- Tarjeta de login --}}
     <div class="flex flex-col items-center p-8 bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-sm sm:max-w-lg mx-auto">

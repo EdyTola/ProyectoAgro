@@ -61,7 +61,7 @@
                     $total = $subtotal + $iva;
                 @endphp
                 <span><strong>Subtotal:</strong> S/ {{ number_format($subtotal, 2) }}</span>
-                <span><strong>IVA (19%):</strong> S/ {{ number_format($iva, 2) }}</span>
+                <span><strong>IGV (19%):</strong> S/ {{ number_format($iva, 2) }}</span>
                 <span style="font-size:1.2rem;"><strong>TOTAL:</strong> S/ {{ number_format($total, 2) }}</span>
             </div>
             <div class="boleta-actions">
